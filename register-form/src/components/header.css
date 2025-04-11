@@ -1,0 +1,15 @@
+.logo-header {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  box-sizing: content-box;
+  color: rgb(66, 66, 66);
+  padding: 25px;
+  --mode: invert(.9) hue-rotate(180deg);
+  text-align: left;
+}
+
+.logo-header img {
+  height: 30px;
+  width: auto;
+}
