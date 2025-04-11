@@ -168,7 +168,7 @@ function Registration() {
             </label>
           </div>
 
-          {errors && <p className="error-message">{errors}</p>}
+          {errors && <p className="error-message-reg">{errors}</p>}
 
           <button
             type="submit"

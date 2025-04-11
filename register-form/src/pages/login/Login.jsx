@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import './Login.css';
 import Header from '../../components/Header';
+import SocialAuth from '../../components/SocialAuth';
 import {
   isValidEmailSyntax,
   validatePassword,
@@ -100,11 +101,15 @@ function Login() {
               Пароль
             </label>
           </div>
-          {errors && <p className="error-message">{errors}</p>}
+          
+          {errors && <p className="error-message-login">{errors}</p>}
+          
           <button type="submit">Войти</button>
+          
           <p className="register-link">
             Нет аккаунта? <Link to="/registration">Зарегистрироваться</Link>
           </p>
+        <SocialAuth />
         </form>
       </div>
     </>

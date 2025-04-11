@@ -1,23 +1,9 @@
-html {
-  /* overflow: hidden; */
-  font-size: 100%;
-  --mode: none;
-}
-
-body {
-  margin: 0;
-  background: var(--ugletelecom-black);
-  font-family: "PT Sans", Roboto, "Segoe UI", sans-serif;
-  line-height: 1.5;
-  color: var(--ugletelecom-black);
-}
-
 .centrify-log {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   min-height: 100vh;
-  padding-top: 5%;
+  padding-top: -5%;
 }
 
 .form-login {
@@ -151,7 +137,7 @@ body {
   }
 }
 
-.error-message {
+.error-message-login {
   color: #ff4d4f;
   text-align: center;
   margin-top: -1rem;
