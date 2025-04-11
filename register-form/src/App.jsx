@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import Login from './Login.jsx';
-import Registration from './Registration.jsx';
+import Login from './pages/login/Login.jsx';
+import Registration from './pages/registration/Registration.jsx';
 
 function App() {
   return (
