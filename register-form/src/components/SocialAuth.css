@@ -1,34 +1,32 @@
 .social-auth {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 2em;
 }
 
 .divider {
+  margin: 2em auto;
+  width: 60%;
   border: none;
-  border-top: 1px solid #ccc;
-  margin: 2rem 0 1rem;
+  border-top: 1px solid var(--ugletelecom-grey);
 }
 
 .social-auth-title {
   color: var(--ugletelecom-grey);
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 1em;
+  margin-bottom: 1em;
 }
 
 .social-auth-icons {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1em;
 }
 
-.social-auth-icons img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.yandex-btn { 
   cursor: pointer;
-  transition: transform 0.2s ease;
 }
 
-.social-auth-icons img:hover {
-  transform: scale(1.1);
+.yandex-btn img {
+  width: 48px;
+  height: 48px;
 }
