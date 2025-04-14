@@ -6,7 +6,7 @@ function Accounts() {
         {
             id: '1f6fbc27-6ea8-407f-a90a-09a08d076720',
             name: 'ООО Веселые старты',
-            status: '',
+            status: '12323231',
             company: 'ООО Веселые старты',
             balance: '10 000 ₽',
             currency: 'руб',
