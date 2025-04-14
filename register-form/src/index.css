@@ -8,6 +8,10 @@
   --ugletelecom-black: #424242;
 }
 
+header {
+  font-family: "PT Sans", Roboto, "Segoe UI", sans-serif;
+}
+
 html {
   /* overflow: hidden; */
   font-size: 100%;

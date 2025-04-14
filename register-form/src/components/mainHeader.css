@@ -1,0 +1,96 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--ugletelecom-black);
+  color: var(--ugletelecom-grey);
+  font-size: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo img {
+  height: 35px;
+  width: auto;
+}
+
+.left-menu {
+  display: flex;
+  gap: 25px;
+  margin-left: 40px;
+  flex: 1;
+  align-items: center;
+}
+
+.left-menu a {
+  text-decoration: none;
+  color: var(--ugletelecom-grey);
+  font-weight: 500;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.left-menu a:hover {
+  color: var(--ugletelecom-light-green);
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.profile {
+  font-weight: bold;
+  color: var(--ugletelecom-grey);
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  background: none;
+  border: none;
+  color: rgb(235, 82, 82);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  transition: opacity 0.2s ease;
+}
+
+.logout-btn:hover {
+  opacity: 0.8;
+}
+
+.logout-icon {
+  width: 20px;
+  height: 16px;
+}
+
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  background: none;
+  border: none;
+  color: var(--ugletelecom-grey);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  transition: color 0.2s ease;
+}
+
+.profile-btn:hover {
+  opacity: 0.8;
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+}

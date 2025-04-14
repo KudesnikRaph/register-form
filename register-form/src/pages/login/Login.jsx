@@ -3,11 +3,8 @@ import React, { useState } from 'react';
 import './Login.css';
 import Header from '../../components/Header';
 import SocialAuth from '../../components/SocialAuth';
-import {
-  isValidEmailSyntax,
-  validatePassword,
-  getEmailSuggestion
-} from '../../components/utils/formValidation';
+import MenuHeader from '../../components/MainHeader';
+import { isValidEmailSyntax, validatePassword, getEmailSuggestion } from '../../components/utils/formValidation';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -65,7 +62,7 @@ function Login() {
 
   return (
     <>
-      <Header />
+      <MenuHeader />
       <div className="centrify-log">
         <form className="form-login shade" onSubmit={handleSubmit}>
           <h2>Вход в личный кабинет</h2>
