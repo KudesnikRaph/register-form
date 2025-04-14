@@ -1,5 +1,6 @@
 import React from 'react';
 import './SocialAuth.css';
+import yandexIcon from '../assets/Yandex_icon.png'; // Adjust the path as necessary
 
 function SocialAuth() {
   return (
@@ -7,18 +8,13 @@ function SocialAuth() {
       <hr className="divider" />
       <p className="social-auth-title">Или войдите с помощью</p>
       <div className="social-auth-icons">
-        <a href="#" title="Госуслуги">
-          <img src="/icons/gosuslugi.svg" alt="Госуслуги" />
-        </a>
-        <a href="#" title="Яндекс">
-          <img src="/icons/yandex.svg" alt="Яндекс" />
-        </a>
-        <a href="#">
-          <img src="/icons/eshield.svg" alt="Esh" />
-        </a>
+        <div className="yandex-btn" title="Войти через Яндекс">
+          <img src={yandexIcon} alt="Яндекс" />
+        </div>
       </div>
     </div>
   );
 }
+
 
 export default SocialAuth;
