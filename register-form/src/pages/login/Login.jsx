@@ -62,7 +62,7 @@ function Login() {
 
   return (
     <>
-      <MenuHeader />
+      <Header />
       <div className="centrify-log">
         <form className="form-login shade" onSubmit={handleSubmit}>
           <h2>Вход в личный кабинет</h2>

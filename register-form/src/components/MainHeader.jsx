@@ -11,10 +11,10 @@ function MenuHeader() {
         <img src={logo} alt="Логотип" />
       </div>
       <nav className="left-menu">
-        <a href="#">Лицевые счета</a>
-        <a href="#">Платежи</a>
-        <a href="#">История операций</a>
-        <a href="#">Услуги</a>
+        <a href="#" className='tab active'>Лицевые счета</a>
+        <a href="#" className='tab active'>Платежи</a>
+        <a href="#" className='tab active'>История операций</a>
+        <a href="#" className='tab active'>Услуги</a>
       </nav>
       <div className="right-menu">
         <button className="profile-btn">

@@ -2,9 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 20px 45px;
   background-color: var(--ugletelecom-black);
   color: var(--ugletelecom-grey);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* мягкий низ */
+  z-index: 10;
+  position: relative;
   font-size: 1rem;
 }
 
@@ -12,28 +15,34 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  padding-top: 5px
 }
 
 .logo img {
-  height: 35px;
+  height: 45px;
   width: auto;
 }
 
 .left-menu {
   display: flex;
   gap: 25px;
-  margin-left: 40px;
-  flex: 1;
+  margin-left: 2rem; /* было 40px — стало чуть короче */
   align-items: center;
+  height: 100%; /* важно! выравнивание по высоте */
+  padding-top: 5px; /* подстройка по вертикали */
 }
 
 .left-menu a {
   text-decoration: none;
   color: var(--ugletelecom-grey);
+  font-size: 18px;
   font-weight: 500;
-  display: inline-block;
-  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 6px 0; /* аккуратный вертикальный отступ */
 }
+
 
 .left-menu a:hover {
   color: var(--ugletelecom-light-green);
@@ -54,23 +63,26 @@
 .logout-btn {
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 1px;
   background: none;
   border: none;
   color: rgb(235, 82, 82);
   font-size: 1rem;
   cursor: pointer;
   padding: 0.5em 1em;
-  transition: opacity 0.2s ease;
+  filter: brightness(1.3);
 }
 
-.logout-btn:hover {
-  opacity: 0.8;
-}
 
 .logout-icon {
-  width: 20px;
-  height: 16px;
+  width: 45px;
+  height: 45px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logout-btn:hover .logout-icon {
+  transform: scale(1.1);
+  filter: brightness(1.3);
 }
 
 .profile-btn {
@@ -83,14 +95,57 @@
   font-size: 1rem;
   cursor: pointer;
   padding: 0.5em 1em;
-  transition: color 0.2s ease;
+  filter: brightness(1.3);
 }
 
-.profile-btn:hover {
-  opacity: 0.8;
+.profile-btn:hover .profile-icon {
+  transform: scale(1.1);
+  filter: brightness(1.3);
 }
 
 .profile-icon {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 37px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.left-menu .tab {
+  position: relative;
+  text-decoration: none;
+  color: var(--ugletelecom-grey);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+.left-menu .tab {
+  position: relative;
+  text-decoration: none;
+  color: var(--ugletelecom-grey);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 6px 0;
+  transition: color 0.3s ease;
+}
+
+.left-menu .tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--ugletelecom-light-green);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.left-menu .tab:hover::after {
+  transform: scaleX(1);
+}
+
+.left-menu .tab:hover {
+  color: var(--ugletelecom-light-green);
 }
