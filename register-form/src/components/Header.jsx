@@ -4,9 +4,13 @@ import './header.css';
 
 function Header() {
   return (
-    <header className="logo-header">
-      <img src={logo} alt="UgleTelecom Logo" />
+    <>
+    <header className="main-header">
+          <div className="logo">
+            <img src={logo} alt="Логотип" />
+          </div>
     </header>
+    </>
   );
 }
 
