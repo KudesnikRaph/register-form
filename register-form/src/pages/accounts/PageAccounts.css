@@ -1,13 +1,12 @@
 .accounts-page {
     padding: 20px;
-    font-family: "PT Sans", Roboto, "Segoe UI", sans-serif;
-    background-color: var(--ugletelecom-grey);
+    background-color: var(--ugletelecom-black);
     min-height: 100vh; 
 }
 
 .accounts-page h1 {
     margin-bottom: 24px;
-    color: #333;
+    color: var(--ugletelecom-black);
     text-align: center;
 }
 
@@ -18,7 +17,7 @@
     flex-direction: column;
     gap: 15px;
     margin-bottom: 20px;
-    background-color: var(--ugletelecom-white);
+    background-color: var(--ugletelecom-black);
     padding: 15px;
     border-radius: 9px;
     box-shadow: 0 1px 3px rgba(156, 149, 149, 0.199);
@@ -35,6 +34,7 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    color: var(--ugletelecom-grey)
 }
 
 .filter-input, .filter-select {
@@ -51,7 +51,7 @@
 
 .reset-button {
     background-color: var(--ugletelecom-green);
-    color: white;
+    color: var(--ugletelecom-grey);
     border: none;
     padding: 8px 20px;
     border-radius: 4px;
@@ -70,7 +70,7 @@
 }
 
 .account-card {
-    background-color: #fdfdfd;
+    color: var(--ugletelecom-grey);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -83,19 +83,19 @@
 
 .account-name {
     font-size: 25px;
-    color: #333;
+    color:var(--ugletelecom-grey);
     margin-bottom: 5px;
 }
 
 .account-period, .account-balance {
     font-size: 17px;
-    color: #666;
+    color: var(--ugletelecom-grey);
     margin-bottom: 10px;
 }
 
 .details-button {
-    background-color: var(--ugletelecom-light-green);
-    color: white;
+    background-color: var(--ugletelecom-green);
+    color: var(--ugletelecom-grey);
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
@@ -104,7 +104,7 @@
 }
 
 .details-button:hover {
-    background-color: var(--ugletelecom-green);
+    background-color: var(--ugletelecom-light-green);
 }
 
 /* Стили модального окна */

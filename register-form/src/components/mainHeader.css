@@ -26,10 +26,10 @@
 .left-menu {
   display: flex;
   gap: 25px;
-  margin-left: 2rem; /* было 40px — стало чуть короче */
+  margin-left: 2rem; 
   align-items: center;
-  height: 100%; /* важно! выравнивание по высоте */
-  padding-top: 5px; /* подстройка по вертикали */
+  height: 100%;
+  padding-top: 5px;
 }
 
 .left-menu a {
@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 6px 0; /* аккуратный вертикальный отступ */
+  padding: 6px 0;
 }
 
 
@@ -63,7 +63,7 @@
 .logout-btn {
   display: flex;
   align-items: center;
-  gap: 1px;
+  gap: 0.5em;
   background: none;
   border: none;
   color: rgb(235, 82, 82);
@@ -75,8 +75,8 @@
 
 
 .logout-icon {
-  width: 45px;
-  height: 45px;
+  width: 23px;
+  height: 23px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 

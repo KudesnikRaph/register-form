@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import './Login.css';
+import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
 import SocialAuth from '../../components/SocialAuth';
-import MenuHeader from '../../components/MainHeader';
 import { isValidEmailSyntax, validatePassword, getEmailSuggestion } from '../../components/utils/formValidation';
 
 function Login() {
@@ -12,6 +12,7 @@ function Login() {
     password: ''
   });
 
+  const navigate = useNavigate();
   const [errors, setErrors] = useState('');
   const [fieldErrors, setFieldErrors] = useState({
     email: false,
@@ -33,12 +34,11 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const newFieldErrors = {
       email: !isValidEmailSyntax(formData.email),
       password: !validatePassword(formData.password)
     };
-
+    
     const suggestion = getEmailSuggestion(formData.email);
     if (suggestion) {
       setFieldErrors({ email: true, password: false });
@@ -58,6 +58,7 @@ function Login() {
     setErrors('');
     setFieldErrors({ email: false, password: false });
     console.log('Форма прошла валидацию:', formData);
+    navigate('/accounts');
   };
 
   return (
@@ -106,7 +107,7 @@ function Login() {
           <p className="register-link">
             Нет аккаунта? <Link to="/registration">Зарегистрироваться</Link>
           </p>
-        <SocialAuth />
+          <SocialAuth />
         </form>
       </div>
     </>

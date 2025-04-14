@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './PageAccounts.css';
+import MenuHeader from '../../components/MainHeader';
 
 function Accounts() {
     const [accounts, setAccounts] = useState([
@@ -56,7 +57,7 @@ function Accounts() {
             services: ['Доставка', 'Логистика', 'GPS-мониторинг']
         },
     ]);
-
+    
     const [companies] = useState([...new Set(accounts.map(account => account.company))]);
     
     const [selectedCompany, setSelectedCompany] = useState('');
@@ -66,25 +67,25 @@ function Accounts() {
 
     useEffect(() => {
         let results = accounts;
-
+        
         if (selectedCompany) {
             results = results.filter(account => account.company === selectedCompany);
         }
-
+        
         if (searchQuery) {
             results = results.filter(account =>
                 account.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 account.accountNumber.toLowerCase().includes(searchQuery.toLowerCase())
             );
         }
-
+        
         setFilteredAccounts(results);
     }, [selectedCompany, accounts, searchQuery]);
 
     const handleCompanyChange = (e) => {
         setSelectedCompany(e.target.value);
     };
-
+    
     const handleAccountClick = (account) => {
         setSelectedAccount(account);
     };
@@ -92,7 +93,7 @@ function Accounts() {
     const closeModal = () => {
         setSelectedAccount(null);
     };
-
+    
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
     };
@@ -101,8 +102,10 @@ function Accounts() {
         setSelectedCompany('');
         setSearchQuery('');
     };
-
+    
     return (
+        <>
+        <MenuHeader />
         <div className="accounts-page">
             
             <div className="filter-section">
@@ -115,7 +118,7 @@ function Accounts() {
                             placeholder="Введите номер или название"
                             value={searchQuery}
                             onChange={handleSearchChange}
-                        />
+                            />
                     </div>
                     
                     <div className="filter-field">
@@ -124,7 +127,7 @@ function Accounts() {
                             value={selectedCompany} 
                             onChange={handleCompanyChange}
                             className="filter-select"
-                        >
+                            >
                             <option value="">-</option>
                             {companies.map(company => (
                                 <option key={company} value={company}>{company}</option>
@@ -172,6 +175,7 @@ function Accounts() {
                 </div>
             )}
         </div>
+            </>
     );
 }
 
