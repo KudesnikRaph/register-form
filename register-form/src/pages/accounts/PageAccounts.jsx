@@ -9,6 +9,7 @@ function Accounts() {
             name: 'ООО Веселые старты',
             status: 'Активен',
             balance: '10 000 ₽',
+            company: 'ООО Веселые старты',
             currency: 'руб',
             accountNumber: '1f6fbc27-6ea8-407f-a90a-09a08d076720',
             periodFrom: '01.01.2024',
@@ -17,11 +18,12 @@ function Accounts() {
             services: ['Интернет', 'Телефония', 'Хостинг']
         },
         {
-            id: 'test-acct',
+            id: 'test-a3cct',
             name: 'ООО Веселые старты',
             status: 'Не активен',
             balance: '5 000 ₽',
             currency: 'руб',
+            company: 'ООО Веселые старты',
             accountNumber: 'test счет',
             periodFrom: '01.01.2024',
             periodTo: '12.04.2025',
@@ -29,11 +31,91 @@ function Accounts() {
             services: ['Техподдержка', 'Облачное хранилище']
         },
         {
+            id: 'test-acc2t',
+            name: 'ООО Веселые старты',
+            status: 'Не активен',
+            balance: '5 000 ₽',
+            currency: 'руб',
+            company: 'ООО Веселые старты',
+            accountNumber: 'test счет',
+            periodFrom: '01.01.2024',
+            periodTo: '12.04.2025',
+            notes: 'Test notes',
+            services: ['Техподдержка', 'Облачное хранилище']
+        },
+        {
+            id: 'test-a4cct',
+            name: 'ООО Веселые старты',
+            status: 'Не активен',
+            balance: '5 000 ₽',
+            currency: 'руб',
+            company: 'ООО Веселые старты',
+            accountNumber: 'test счет',
+            periodFrom: '01.01.2024',
+            periodTo: '12.04.2025',
+            notes: 'Test notes',
+            services: ['Техподдержка', 'Облачное хранилище']
+        },
+        {
+            id: 'test-ac5ct',
+            name: 'ООО Веселые старты',
+            status: 'Не активен',
+            balance: '5 000 ₽',
+            currency: 'руб',
+            company: 'ООО Веселые старты',
+            accountNumber: 'test счет',
+            periodFrom: '01.01.2024',
+            periodTo: '12.04.2025',
+            notes: 'Test notes',
+            services: ['Техподдержка', 'Облачное хранилище']
+        },
+        {
+            id: 'test-ac756ct',
+            name: 'ООО Веселые старты',
+            status: 'Не активен',
+            balance: '5 000 ₽',
+            currency: 'руб',
+            company: 'ООО Веселые старты',
+            accountNumber: 'test счет',
+            periodFrom: '01.01.2024',
+            periodTo: '12.04.2025',
+            notes: 'Test notes',
+            services: ['Техподдержка', 'Облачное хранилище']
+        },
+        {
+            id: 'test88-acct',
+            name: 'ООО Веселые старты',
+            status: 'Не активен',
+            balance: '5 000 ₽',
+            currency: 'руб',
+            company: 'ООО Веселые старты',
+            accountNumber: 'test счет',
+            periodFrom: '01.01.2024',
+            periodTo: '12.04.2025',
+            notes: 'Test notes',
+            services: ['Техподдержка', 'Облачное хранилище']
+        },
+        {
+            id: 'test-acc98t',
+            name: 'ООО Веселые старты',
+            status: 'Не активен',
+            balance: '5 000 ₽',
+            currency: 'руб',
+            company: 'ООО Веселые старты',
+            accountNumber: 'test счет',
+            periodFrom: '01.01.2024',
+            periodTo: '12.04.2025',
+            notes: 'Test notes',
+            services: ['Техподдержка', 'Облачное хранилище']
+        },
+
+        {
             id: 'eb8d2c12-03c2-486f-9545-ad33d27415f5',
             name: 'ООО Веселые старты',
             status: 'Активен',
             balance: '7 500 ₽',
             currency: 'руб',
+            company: 'ООО Веселые старты',
             accountNumber: 'eb8d2c12-03c2-486f-9545-ad33d27415f5',
             periodFrom: '01.01.2024',
             periodTo: '30.04.2024',
@@ -41,11 +123,25 @@ function Accounts() {
             services: ['Виртуальный сервер', 'Техподдержка 24/7']
         },
         {
-            id: 'courier-acct',
+            id: 'courisdsaer-acdwct',
             name: 'Test Testerovich',
             status: 'Активен',
             balance: '2 500 ₽',
             currency: 'руб',
+            company: 'Test Testerovich',
+            accountNumber: 'Счет Курьера',
+            periodFrom: '01.01.2024',
+            periodTo: '15.04.2024',
+            notes: 'Courier notes',
+            services: ['Доставка', 'Логистика', 'GPS-мониторинг']
+        },
+        {
+            id: 'courier-acdwct',
+            name: 'Test Testerovich',
+            status: 'Активен',
+            balance: '2 500 ₽',
+            currency: 'руб',
+            company: 'Test Testerovich',
             accountNumber: 'Счет Курьера',
             periodFrom: '01.01.2024',
             periodTo: '15.04.2024',
@@ -90,8 +186,6 @@ function Accounts() {
         <>
         <MenuHeader />
         <div className="accounts-page">
-            
-
             <div className="search-section">
                 <div className="search-container">
                     <div className="search-fields">
