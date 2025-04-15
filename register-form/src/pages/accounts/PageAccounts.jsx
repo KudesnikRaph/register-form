@@ -3,7 +3,7 @@ import './PageAccounts.css';
 import MenuHeader from '../../components/headers/MainHeader';
 
 function Accounts() {
-    const [accounts, setAccounts] = useState([
+    const [accounts] = useState([
         {
             id: '1f6fbc27-6ea8-407f-a90a-09a08d076720',
             name: 'ООО Веселые старты',
@@ -185,41 +185,41 @@ function Accounts() {
     return (
         <>
         <MenuHeader />
-        <div className="accounts-page">
-            <div className="search-section">
-                <div className="search-container">
-                    <div className="search-fields">
-                        <input
-                            type="text"
-                            className="search-input"
-                            placeholder="Поиск по номеру или названию"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                        />
-                        <select
-                            value={selectedCompany}
-                            onChange={(e) => setSelectedCompany(e.target.value)}
-                            className="company-select"
-                        >
-                            <option value="">Все компании</option>
-                            {companies.map((c) => (
-                                <option key={c} value={c}>
-                                    {c}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-                    <button
-                        className="reset-button"
-                        onClick={() => {
-                            setSelectedCompany('');
-                            setSearchQuery('');
-                        }}
-                    >
-                        Сбросить
-                    </button>
-                </div>
+
+     <div className="search-bar">
+        <div className="search-section">
+            <div className="search-fields">
+            <input
+                type="text"
+                className="search-input small"
+                placeholder="Поиск по номеру или названию"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <select
+                value={selectedCompany}
+                onChange={(e) => setSelectedCompany(e.target.value)}
+                className="company-select small"
+            >
+                <option value="">Все компании</option>
+                {companies.map((c) => (
+                <option key={c} value={c}>
+                    {c}
+                </option>
+                ))}
+            </select>
+            <button
+            className="reset-button from"
+            onClick={() => {
+                setSelectedCompany('');
+                setSearchQuery('');
+            }}
+            >
+            Сбросить
+            </button>
             </div>
+        </div>
+    </div>
             
             <div className="accounts-container">
                 {filteredAccounts.map(account => (
@@ -253,7 +253,6 @@ function Accounts() {
                     </div>
                 </div>
             )}
-        </div>
         </>
     );
 }
