@@ -7,8 +7,7 @@ function Accounts() {
         {
             id: '1f6fbc27-6ea8-407f-a90a-09a08d076720',
             name: 'ООО Веселые старты',
-            status: '12323231',
-            company: 'ООО Веселые старты',
+            status: 'Активен',
             balance: '10 000 ₽',
             currency: 'руб',
             accountNumber: '1f6fbc27-6ea8-407f-a90a-09a08d076720',
@@ -20,8 +19,7 @@ function Accounts() {
         {
             id: 'test-acct',
             name: 'ООО Веселые старты',
-            status: '',
-            company: 'ООО Веселые старты',
+            status: 'Не активен',
             balance: '5 000 ₽',
             currency: 'руб',
             accountNumber: 'test счет',
@@ -33,8 +31,7 @@ function Accounts() {
         {
             id: 'eb8d2c12-03c2-486f-9545-ad33d27415f5',
             name: 'ООО Веселые старты',
-            status: '',
-            company: 'ООО Веселые старты',
+            status: 'Активен',
             balance: '7 500 ₽',
             currency: 'руб',
             accountNumber: 'eb8d2c12-03c2-486f-9545-ad33d27415f5',
@@ -46,8 +43,7 @@ function Accounts() {
         {
             id: 'courier-acct',
             name: 'Test Testerovich',
-            status: '',
-            company: 'Test Testerovich',
+            status: 'Активен',
             balance: '2 500 ₽',
             currency: 'руб',
             accountNumber: 'Счет Курьера',
@@ -82,10 +78,6 @@ function Accounts() {
         setFilteredAccounts(results);
     }, [selectedCompany, accounts, searchQuery]);
 
-    const handleCompanyChange = (e) => {
-        setSelectedCompany(e.target.value);
-    };
-    
     const handleAccountClick = (account) => {
         setSelectedAccount(account);
     };
@@ -94,50 +86,44 @@ function Accounts() {
         setSelectedAccount(null);
     };
     
-    const handleSearchChange = (e) => {
-        setSearchQuery(e.target.value);
-    };
-
-    const handleResetFilter = () => {
-        setSelectedCompany('');
-        setSearchQuery('');
-    };
-    
     return (
         <>
         <MenuHeader />
         <div className="accounts-page">
             
-            <div className="filter-section">
-                <div className="filter-row">
-                    <div className="filter-field">
-                        <label>Поиск по номеру или названию</label>
-                        <input 
-                            type="text" 
-                            className="filter-input" 
-                            placeholder="Введите номер или название"
+
+            <div className="search-section">
+                <div className="search-container">
+                    <div className="search-fields">
+                        <input
+                            type="text"
+                            className="search-input"
+                            placeholder="Поиск по номеру или названию"
                             value={searchQuery}
-                            onChange={handleSearchChange}
-                            />
-                    </div>
-                    
-                    <div className="filter-field">
-                        <label>Компания</label>
-                        <select 
-                            value={selectedCompany} 
-                            onChange={handleCompanyChange}
-                            className="filter-select"
-                            >
-                            <option value="">-</option>
-                            {companies.map(company => (
-                                <option key={company} value={company}>{company}</option>
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                        />
+                        <select
+                            value={selectedCompany}
+                            onChange={(e) => setSelectedCompany(e.target.value)}
+                            className="company-select"
+                        >
+                            <option value="">Все компании</option>
+                            {companies.map((c) => (
+                                <option key={c} value={c}>
+                                    {c}
+                                </option>
                             ))}
                         </select>
                     </div>
-                </div>
-                
-                <div className="button-group">
-                    <button className="reset-button" onClick={handleResetFilter}>Сброс</button>
+                    <button
+                        className="reset-button"
+                        onClick={() => {
+                            setSelectedCompany('');
+                            setSearchQuery('');
+                        }}
+                    >
+                        Сбросить
+                    </button>
                 </div>
             </div>
             
@@ -160,7 +146,6 @@ function Accounts() {
                             <button className="close-button" onClick={closeModal}>×</button>
                         </div>
                         <div className="modal-body">
-                            <p><b>Компания:</b> {selectedAccount.company}</p>
                             <p><b>Статус:</b> {selectedAccount.status}</p>
                             <p><b>Номер счёта:</b> {selectedAccount.accountNumber}</p>
                             <p><b>Примечания:</b> {selectedAccount.notes}</p>
@@ -175,7 +160,7 @@ function Accounts() {
                 </div>
             )}
         </div>
-            </>
+        </>
     );
 }
 
