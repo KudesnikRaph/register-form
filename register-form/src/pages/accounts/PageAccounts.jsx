@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './PageAccounts.css';
-import MenuHeader from '../../components/MainHeader';
+import MenuHeader from '../../components/headers/MainHeader';
 
 function Accounts() {
     const [accounts, setAccounts] = useState([

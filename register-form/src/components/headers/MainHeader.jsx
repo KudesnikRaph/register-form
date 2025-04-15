@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from '../assets/logo.png';
+import logo from '../../assets/logo.png';
 import './mainHeader.css';
-import logoutIcon from '../assets/logout.png';
-import profileIcon from '../assets/profile.png';
-import { useNavigate } from 'react-router-dom';
+import logoutIcon from '../../assets/logout.png';
+import profileIcon from '../../assets/profile.png';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 function MenuHeader() {
   const navigate = useNavigate();
@@ -20,10 +20,10 @@ function MenuHeader() {
         <img src={logo} alt="Логотип" />
       </div>
       <nav className="left-menu">
-        <a href="/accounts" className='tab active'>Лицевые счета</a>
-        <a href="#" className='tab active'>Платежи</a>
-        <a href="#" className='tab active'>История операций</a>
-        <a href="#" className='tab active'>Услуги</a>
+        <NavLink to="/accounts" className={({ isActive }) => isActive ? 'tab active' : 'tab'}>Лицевые счета</NavLink>
+        <NavLink to="/payments" className={({ isActive }) => isActive ? 'tab active' : 'tab'}>Платежи</NavLink>
+        <NavLink to="/history" className={({ isActive }) => isActive ? 'tab active' : 'tab'}>История операций</NavLink>
+        <NavLink to="/services" className={({ isActive }) => isActive ? 'tab active' : 'tab'}>Услуги</NavLink>
       </nav>
       <div className="right-menu">
         <button className="profile-btn">

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import './Registration.css';
-import Header from '../../components/Header'; 
+import Header from '../../components/headers/Header';
 import {
   isValidEmailSyntax,
   validatePassword,
