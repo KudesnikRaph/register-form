@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
-import Header from '../../components/Header';
+import Header from '../../components/headers/Header';
 import SocialAuth from '../../components/SocialAuth';
 import { isValidEmailSyntax, validatePassword, getEmailSuggestion } from '../../components/utils/formValidation';
 
